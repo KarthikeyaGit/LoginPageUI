@@ -1,18 +1,21 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <title>Login Page</title>
 </head>
+
 <body>
     <div class="main">
 
-        <div class="card">
+        <!-- Login Card -->
+        <div class="card" id="login-card">
             <div class="c-header">
                 Log in
             </div>
@@ -32,18 +35,64 @@
                 <button class="btn-primary">Log in</button>
             </div>
             <div class="card-footer">
-                <div class="btn-text">Forgot Password?</div>
+                <div class="btn-text pointer">Forgot Password?</div>
             </div>
             <div class="divider"></div>
             <div class="card-footer">
                 <div class="btn-text-dark">Don’t have an account?</div>
             </div>
             <div class="card-footer">
-                <div class="btn-text">Sign up</div>
+                <div class="btn-text pointer" onclick="showSignUp()">Sign up</div>
+            </div>
+        </div>
+
+        <!-- Signup Card (Initially Hidden) -->
+        <div class="card" id="signup-card" style="display: none;">
+            <div class="c-header">
+                Sign Up
+            </div>
+            <div class="card-form-group">
+                <label>Email or Username</label>
+                <input type="text" placeholder="Enter your email or username">
+            </div>
+            <div class="card-form-group">
+                <label>Password</label>
+                <input type="password" placeholder="Create a password">
+            </div>
+            <div class="card-form-group">
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Confirm your password">
+            </div>
+            <div class="card-footer">
+                <button class="btn-primary">Sign up</button>
+            </div>
+
+            <div class="card-footer">
+                <div class="btn-text-dark">Already have an account?</div>
+            </div>
+            <div class="card-footer">
+                <div class="btn-text pointer" onclick="showLogin()">Log in</div>
             </div>
 
         </div>
+
     </div>
-    
+
+    <script>
+        // Function to show the Signup card and hide the Login card
+        function showSignUp() {
+            document.getElementById("login-card").style.display = "none";
+            document.getElementById("signup-card").style.display = "block";
+        }
+
+        // Function to show the Login card and hide the Signup card
+        function showLogin() {
+            document.getElementById("signup-card").style.display = "none";
+            document.getElementById("login-card").style.display = "block";
+        }
+    </script>
+
+
 </body>
+
 </html>
