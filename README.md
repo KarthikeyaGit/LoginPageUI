@@ -1,3 +1,3 @@
 # LoginPageUI
 
-[LoginPageUI](https://karthikeyagit.github.io/LoginPageUI/)
+[LoginPageUI](https://login-page-ui.vercel.app)
